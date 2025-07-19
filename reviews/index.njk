@@ -1,0 +1,13 @@
+---
+layout: base.njk
+title: Reviews
+permalink: /reviews/
+---
+
+<h1>Reviews</h1>
+<p>All the sips. No buzz.</p>
+<ul>
+  {% for review in collections.reviews %}
+    <li><a href="{{ review.url }}">{{ review.data.title }}</a></li>
+  {% endfor %}
+</ul>
