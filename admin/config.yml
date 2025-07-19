@@ -1,0 +1,26 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "reviews"
+    label: "Reviews"
+    folder: "reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Brand", name: "brand", widget: "string" }
+      - { label: "Type", name: "type", widget: "string" }
+      - { label: "Packaging", name: "packaging", widget: "string" }
+      - { label: "Origin", name: "origin", widget: "string" }
+      - { label: "Carbonation", name: "carbonation", widget: "string" }
+      - { label: "Sweetness", name: "sweetness", widget: "string" }
+      - { label: "Caffeine", name: "caffeine", widget: "string" }
+      - { label: "Score", name: "score", widget: "number" }
+      - { label: "Would Buy Again", name: "would_buy_again", widget: "boolean" }
+      - { label: "Body", name: "body", widget: "markdown" }
