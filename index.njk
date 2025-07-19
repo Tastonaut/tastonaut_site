@@ -5,29 +5,27 @@
   <meta charset="UTF-8" />
   <title>Tastonaut</title>
   <meta name="description" content="Exploring the universe of drinks — one sip at a time.">
+  <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
   <header>
     <h1>TASTONAUT</h1>
     <p>Exploring the universe of drinks — one sip at a time.</p>
     <nav>
-      <a href="/">Home</a> |
-      <a href="/reviews">Reviews</a> |
-      <a href="/about">About</a>
+      <a href="/">Home</a>
+      <a href="/reviews/">Reviews</a>
+      <a href="/about/">About</a>
     </nav>
   </header>
-
   <main>
     <h2>Latest Reviews</h2>
-    <ul>
-      {% for review in collections.reviews %}
-        <li>
-          <a href="{{ review.url }}">{{ review.data.title }} – {{ review.data.score }}/10</a>
-        </li>
-      {% endfor %}
-    </ul>
+    {% for review in collections.reviews %}
+      <div class="review-card">
+        <a href="{{ review.url }}">{{ review.data.title }}</a>
+        <p>{{ review.data.brand }} — Score: {{ review.data.score }}/10</p>
+      </div>
+    {% endfor %}
   </main>
-
   <footer>
     <p>No cookies. No tracking. Just drinks.</p>
   </footer>

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
   <header>
@@ -11,11 +12,9 @@
     <h1>{{ title }}</h1>
     <p>{{ brand }} – {{ type }} – Score: {{ score }}/10</p>
   </header>
-
   <main>
     {{ content | safe }}
   </main>
-
   <footer>
     <p>No cookies. No tracking. Just drinks.</p>
   </footer>
