@@ -2,6 +2,9 @@ backend:
   name: github
   repo: Tastonaut/tastonaut_site
   branch: main
+  auth_scope: repo
+  app_id: Ov23li8MrqsDDo9KQOgb 
+  base_url: https://api.github.
 
 media_folder: "images"
 public_folder: "/images"
