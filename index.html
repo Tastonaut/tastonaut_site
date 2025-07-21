@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tastonaut</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <img src="/assets/images/logo.png" alt="Tastonaut Logo" class="logo"/>
+    <h1>Welcome to Tastonaut, your mission control for non-alcoholic drink reviews.</h1>
+    <p class="tagline">Curating non-alcoholic drink reviews with style, zero data tracking, and space-age flavor analysis.</p>
+  </header>
+  <main>
+    <h2>Latest Reviews</h2>
+    <ul>
+      {% for post in collections.reviews %}
+        <li><a href="{{ post.url }}">{{ post.data.title }}</a> - {{ post.data.rating }}/10</li>
+      {% endfor %}
+    </ul>
+  </main>
+  <footer>
+    <p>© Tastonaut 2025</p>
+  </footer>
+</body>
+</html>
