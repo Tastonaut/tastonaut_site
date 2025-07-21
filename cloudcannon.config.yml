@@ -1,33 +1,43 @@
-_schema: _schema
-paths:
-  uploads: uploads
-  static: ''
-collections_config:
+collections:
   reviews:
-    path: reviews
-    name: Reviews
-    icon: reviews
-    disable_url: false
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    output: true
+    path: "reviews/{filename}.md"
+    label: "Drink Reviews"
+    icon: drink
+    fields:
+      - type: text
+        name: title
+        label: Title
+      - type: datetime
+        name: date
+        label: Date
+      - type: select
+        name: type
+        label: Drink Type
+        options:
+          - Soda
+          - Energy Drink
+          - Juice
+          - Water
+      - type: number
+        name: rating
+        label: Rating
+        min: 1
+        max: 10
+      - type: markdown
+        name: body
+        label: Review
+
+# Optional: For future editable fields in index.html or about.html
+pages:
+  index.html:
+    label: Homepage
+    fields:
+      - type: text
+        name: header
+        label: Welcome Header
+      - type: text
+        name: subheading
+        label: Subheading / Tagline
+
 timezone: Europe/Paris
-markdown:
-  engine: commonmark
-  options:
-    xhtml: false
-    breaks: false
-    linkify: false
-    typographer: false
-    spaced_lists: false
-    sentence_per_line: false
-    gfm: false
-    code_block_fences: '```'
-    escape_snippets_in_code_blocks: false
-    treat_indentation_as_code: false
-    table: false
-    strikethrough: false
-    subscript: false
-    superscript: false
-    heading_ids: false
-    attributes: false
