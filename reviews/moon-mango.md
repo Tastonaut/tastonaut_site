@@ -1,5 +1,5 @@
 ---
-title: The red bull Sea blue
+title: The red bull Sea blue!
 date: 2025-07-22T00:00:00Z
 type: Juice
 rating: 9
