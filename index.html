@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tastonaut</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Tastonaut, your mission control for non-alcoholic drink reviews.</h1>
+    <p>Curating non-alcoholic drink reviews with style, zero data tracking, and space-age flavor analysis.</p>
+  </header>
+  <main>
+    <h2>Latest Reviews</h2>
+    <ul>
+      {% for post in collections.reviews %}
+        <li><a href="{{ post.url }}">{{ post.data.title }}</a> - {{ post.data.rating }}/10</li>
+      {% endfor %}
+    </ul>
+  </main>
+</body>
+</html>
