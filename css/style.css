@@ -20,6 +20,11 @@ header {
 }
 main {
   padding: 2rem;
+  background-image: url('/assets/images/logo-grey-transparent.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 400px auto;
+  background-attachment: fixed;
 }
 footer {
   text-align: center;
