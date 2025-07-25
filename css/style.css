@@ -1,32 +1,38 @@
-
 body {
   margin: 0;
   font-family: sans-serif;
   background-color: #ffffff;
   color: #222;
   padding: 1rem;
+
+  /* NEW background image setup */
+  background-image: url('/assets/images/logo-grey-transparent.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 400px auto;
+  background-attachment: fixed;
 }
+
 header {
   text-align: center;
   background-color: #003366;
   color: white;
   padding: 2rem 1rem;
 }
+
 .logo {
   height: 80px;
 }
+
 .tagline {
   font-style: italic;
 }
+
 main {
   padding: 2rem;
-  background-image: url('/assets/images/logo-grey-transparent.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 400px auto;
-  background-attachment: fixed;
-  background-color: #f0f0f0; /* Just for testing */
+
 }
+
 footer {
   text-align: center;
   font-size: 0.8rem;
@@ -34,6 +40,7 @@ footer {
   background-color: #003366;
   color: white;
 }
+
 a {
   color: #0055aa;
   text-decoration: none;
