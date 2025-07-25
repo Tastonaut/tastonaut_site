@@ -25,6 +25,7 @@ main {
   background-position: center center;
   background-size: 400px auto;
   background-attachment: fixed;
+  background-color: #f0f0f0; /* Just for testing */
 }
 footer {
   text-align: center;
