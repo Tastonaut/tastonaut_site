@@ -5,7 +5,7 @@ body {
   color: #222;
   padding: 1rem;
 
-  /* NEW background image setup */
+  /* Watermark-style background image */
   background-image: url('/assets/images/logo-grey-transparent.png');
   background-repeat: no-repeat;
   background-position: center center;
@@ -14,23 +14,33 @@ body {
 }
 
 header {
-  text-align: center;
   background-color: #003366;
   color: white;
   padding: 2rem 1rem;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .logo {
-  height: 80px;
+  height: 100px;
 }
 
 .tagline {
   font-style: italic;
+  margin-top: 0.5rem;
 }
 
 main {
   padding: 2rem;
-
 }
 
 footer {
