@@ -1,27 +1,30 @@
 /* Base layout */
-body {
+html, body {
   margin: 0;
+  padding: 0;
   font-family: sans-serif;
   background-color: #ffffff;
   color: #222;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ✅ Background wrapper */
 .background-wrapper {
-  background-image: url('/assets/images/logo-grey-transparent.png'); /* Ensure this matches your new file */
+  background-image: url('/assets/images/logo-grey-transparent.png'); /* Make sure this path is correct */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   background-attachment: scroll;
   background-color: #F4F3F3;
 
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
+  flex: 1;
+  padding: 2rem 1rem;
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
+  display: block; /* ✅ remove centering that caused layout shift */
 }
 
 header {
@@ -60,6 +63,7 @@ main {
   margin: 0 auto;
 }
 
+/* ✅ Footer at the bottom */
 footer {
   text-align: center;
   font-size: 0.8rem;
@@ -68,6 +72,7 @@ footer {
   color: white;
 }
 
+/* Links */
 a {
   color: #0055aa;
   text-decoration: none;
