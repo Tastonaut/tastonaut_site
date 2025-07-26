@@ -89,4 +89,10 @@ a {
     font-size: 1.4rem;
     line-height: 1.4;
   }
+
+  html, body {
+    background-size: 300px auto;
+    background-position: center top;
+    opacity: 0.05; /* ✅ Fade effect on mobile */
+  }
 }
