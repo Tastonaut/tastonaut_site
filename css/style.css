@@ -1,19 +1,24 @@
 html, body {
-  height: 100%; /* NEW: enables full-height flex container */
+  height: 100%;
   margin: 0;
   font-family: sans-serif;
   background-color: #ffffff;
   color: #222;
   padding: 1rem;
 
-  /* Watermark-style background image */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ NEW: visual grouping of background with header+footer */
+.site-container {
   background-image: url('/assets/images/logo-grey-transparent.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 400px auto;
-  background-attachment: fixed;
-
-  display: flex;         /* NEW: enables vertical layout */
+  background-attachment: scroll; /* moves with content */
+  min-height: 100%;
+  display: flex;
   flex-direction: column;
 }
 
@@ -34,7 +39,6 @@ header {
   margin: 0 auto;
 }
 
-/* ✅ Only new additions start here */
 .header-container h1 {
   margin: 0;
   font-size: 1.5rem;
@@ -44,20 +48,14 @@ header {
 .text-container {
   max-width: 600px;
 }
-/* ✅ Only new additions end here */
 
 .logo {
   height: 100px;
 }
 
-.tagline {
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
 main {
   padding: 2rem;
-  flex: 1; /* ✅ NEW: pushes footer down */
+  flex: 1; /* push footer down */
 }
 
 footer {
@@ -73,7 +71,7 @@ a {
   text-decoration: none;
 }
 
-/* ✅ Responsive styling for mobile screens */
+/* ✅ Mobile fix for layout and scaling */
 @media (max-width: 600px) {
   .header-container {
     flex-direction: column;
@@ -90,9 +88,10 @@ a {
     line-height: 1.4;
   }
 
-  html, body {
+  .site-container {
     background-size: 300px auto;
     background-position: center top;
-    opacity: 0.05; /* ✅ Fade effect on mobile */
+    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                      url('/assets/images/logo-grey-transparent.png');
   }
 }
