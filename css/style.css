@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background-color:#041E38;
+  background-color: #041E38;
   color: white;
   padding: 2rem 1rem;
 }
@@ -66,4 +66,22 @@ footer {
 a {
   color: #0055aa;
   text-decoration: none;
+}
+
+/* ✅ Responsive styling for mobile screens */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-container {
+    max-width: 90%;
+  }
+
+  .header-container h1 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
 }
