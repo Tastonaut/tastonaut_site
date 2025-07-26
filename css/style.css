@@ -4,22 +4,23 @@ html, body {
   font-family: sans-serif;
   background-color: #ffffff;
   color: #222;
-  padding: 1rem;
 
   display: flex;
   flex-direction: column;
 }
 
-/* ✅ Background image applied to full-height container */
+/* 🔧 Background image on the full vertical space between header and footer */
 .site-container {
-  background-image: url('/assets/images/logo-grey-transparent.png');
-  background-repeat: no-repeat;
-  background-position: center 50%;     /* ✅ Avoids overlap with header */
-  background-size: cover;              /* ✅ Fills space between header and footer */
-  background-attachment: scroll;
-  min-height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
+
+  background-image: url('/assets/images/logo-grey-transparent.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  min-height: 100vh; /* full screen height */
 }
 
 header {
@@ -55,7 +56,7 @@ header {
 
 main {
   padding: 2rem;
-  flex: 1; /* ✅ Pushes footer down */
+  flex: 1; /* 🧩 Pushes footer down */
 }
 
 footer {
@@ -69,32 +70,4 @@ footer {
 a {
   color: #0055aa;
   text-decoration: none;
-}
-
-/* ✅ Responsive styling for mobile screens */
-@media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .text-container {
-    max-width: 90%;
-  }
-
-  .header-container h1 {
-    font-size: 1.4rem;
-    line-height: 1.4;
-  }
-
-  /* ✅ Mobile-specific adjustments for background */
-  .site-container {
-    background-size: contain;
-    background-position: center top;
-    background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-                      url('/assets/images/logo-grey-transparent.png');
-    padding-top: 2rem;
-    min-height: 100vh;
-  }
 }
