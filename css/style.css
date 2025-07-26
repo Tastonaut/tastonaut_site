@@ -77,13 +77,12 @@ a {
   color: #0055aa;
   text-decoration: none;
 }
-/* ✅ Responsive Mobile Fix (mobile only) */
 @media (max-width: 600px) {
   html, body {
-    height: auto;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
+    height: auto;
+    overflow-x: hidden;
   }
 
   .header-container {
@@ -104,21 +103,29 @@ a {
   .background-wrapper {
     background-size: 80%;
     background-position: top center;
-    padding: 1rem;
-    display: block;
-    min-height: auto;
+    padding: 1.5rem 1rem 2rem 1rem;
+    margin: 0 auto;
     max-width: 100%;
-    margin-bottom: 0;
+    min-height: unset;     /* removes excess height */
+    box-sizing: border-box;
   }
 
   main {
-    padding: 0 1rem;
+    padding: 0;
     margin: 0;
     text-align: left;
+    max-width: 100%;
   }
 
   footer {
-    margin-bottom: 0;
-    padding-bottom: 1rem;
+    margin: 0;
+    padding: 1rem 0;
+    background-color: #041E38;
+    color: white;
+  }
+
+  /* Optional: force footer to bottom if content is short */
+  body {
+    display: block !important;
   }
 }
