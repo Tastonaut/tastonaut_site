@@ -1,26 +1,20 @@
-html, body {
-  height: 100%;
+/* Base layout */
+body {
   margin: 0;
   font-family: sans-serif;
   background-color: #ffffff;
   color: #222;
-
-  display: flex;
-  flex-direction: column;
 }
 
-/* 🔧 Background image on the full vertical space between header and footer */
-.site-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-
+/* ✅ Only this wrapper gets the background */
+.background-wrapper {
   background-image: url('/assets/images/logo-grey-transparent.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-attachment: scroll;
-  min-height: 100vh; /* full screen height */
+  padding: 2rem;
+  min-height: 60vh; /* flexible area */
 }
 
 header {
@@ -55,8 +49,8 @@ header {
 }
 
 main {
-  padding: 2rem;
-  flex: 1; /* 🧩 Pushes footer down */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 footer {
@@ -70,4 +64,28 @@ footer {
 a {
   color: #0055aa;
   text-decoration: none;
+}
+
+/* ✅ Responsive mobile adjustment */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-container {
+    max-width: 90%;
+  }
+
+  .header-container h1 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .background-wrapper {
+    background-size: 80%;
+    background-position: top center;
+    padding-top: 5rem;
+  }
 }
