@@ -30,6 +30,18 @@ header {
   margin: 0 auto;
 }
 
+/* ✅ Only new additions start here */
+.header-container h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.text-container {
+  max-width: 600px;
+}
+/* ✅ Only new additions end here */
+
 .logo {
   height: 100px;
 }
