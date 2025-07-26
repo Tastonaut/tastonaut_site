@@ -77,9 +77,15 @@ a {
   color: #0055aa;
   text-decoration: none;
 }
-
 /* ✅ Responsive Mobile Fix (mobile only) */
 @media (max-width: 600px) {
+  html, body {
+    height: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
   .header-container {
     flex-direction: column;
     align-items: center;
@@ -98,18 +104,21 @@ a {
   .background-wrapper {
     background-size: 80%;
     background-position: top center;
-    padding: 2rem 1rem;           /* Reduced padding */
-    display: block;              /* Removes center alignment */
-    min-height: auto;            /* Prevents forced height */
-    max-width: 100%;             /* Uses full width */
+    padding: 1rem;
+    display: block;
+    min-height: auto;
+    max-width: 100%;
+    margin-bottom: 0;
   }
 
   main {
     padding: 0 1rem;
     margin: 0;
+    text-align: left;
   }
 
   footer {
     margin-bottom: 0;
+    padding-bottom: 1rem;
   }
 }
