@@ -1,4 +1,5 @@
-body {
+html, body {
+  height: 100%; /* NEW: enables full-height flex container */
   margin: 0;
   font-family: sans-serif;
   background-color: #ffffff;
@@ -11,6 +12,9 @@ body {
   background-position: center center;
   background-size: 400px auto;
   background-attachment: fixed;
+
+  display: flex;         /* NEW: enables vertical layout */
+  flex-direction: column;
 }
 
 header {
@@ -53,6 +57,7 @@ header {
 
 main {
   padding: 2rem;
+  flex: 1; /* ✅ NEW: pushes footer down */
 }
 
 footer {
