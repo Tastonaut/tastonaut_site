@@ -14,8 +14,8 @@ html, body {
 .site-container {
   background-image: url('/assets/images/logo-grey-transparent.png');
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;         /* ✅ Fills space between header and footer */
+  background-position: center 50%;     /* ✅ Avoids overlap with header */
+  background-size: cover;              /* ✅ Fills space between header and footer */
   background-attachment: scroll;
   min-height: 100%;
   display: flex;
@@ -55,7 +55,7 @@ header {
 
 main {
   padding: 2rem;
-  flex: 1; /* pushes footer down */
+  flex: 1; /* ✅ Pushes footer down */
 }
 
 footer {
@@ -88,7 +88,13 @@ a {
     line-height: 1.4;
   }
 
-  /* ✅ Mobile-only background sizing */
+  /* ✅ Mobile-specific adjustments for background */
   .site-container {
     background-size: contain;
     background-position: center top;
+    background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                      url('/assets/images/logo-grey-transparent.png');
+    padding-top: 2rem;
+    min-height: 100vh;
+  }
+}
