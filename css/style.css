@@ -6,8 +6,12 @@ html, body {
   background-color: #F4F3F3;
   color: #222;
   height: 100%;
+}
+
+body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ✅ Background wrapper */
@@ -63,13 +67,14 @@ main {
   margin: 0 auto;
 }
 
-/* ✅ Footer at the bottom */
+/* ✅ Footer always sticks to bottom */
 footer {
   text-align: center;
   font-size: 0.8rem;
   padding: 1rem;
   background-color: #041E38;
   color: white;
+  margin-top: auto;
 }
 
 /* ✅ Navigation Bar (now matches header) */
@@ -153,11 +158,4 @@ a {
     background-color: #041E38;
     color: white;
   }
-
-  /* Optional: force footer to bottom if content is short */
-  body {
-    display: block !important;
-  }
 }
-
-This version keep
