@@ -8,22 +8,26 @@ html, body {
   height: 100%;
 }
 
-body {
+/* ✅ Page wrapper for proper layout */
+.page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+.page-wrapper main {
+  flex: 1;
+}
+
 /* ✅ Background wrapper */
 .background-wrapper {
-  background-image: url('/assets/images/logo-grey-transparent.png'); /* Make sure this path is correct */
+  background-image: url('/assets/images/logo-grey-transparent.png'); /* Ensure correct path */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   background-attachment: scroll;
   background-color: #F4F3F3;
 
-  flex: 1;
   padding: 2rem 1rem;
   max-width: 1000px;
   width: 100%;
@@ -117,8 +121,6 @@ a {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
   }
 
   .header-container {
@@ -143,9 +145,7 @@ a {
     margin: 0 auto;
     max-width: 100%;
     width: 100%;
-    flex: 1; /* ✅ Fills space above footer */
     box-sizing: border-box;
-    display: block;
   }
 
   main {
@@ -160,6 +160,5 @@ a {
     padding: 1rem 0;
     background-color: #041E38;
     color: white;
-    flex-shrink: 0;
   }
 }
