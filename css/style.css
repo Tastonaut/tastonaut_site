@@ -116,8 +116,9 @@ a {
   html, body {
     margin: 0;
     padding: 0;
-    height: auto;
-    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .header-container {
@@ -141,8 +142,10 @@ a {
     padding: 1.5rem 1rem 2rem 1rem;
     margin: 0 auto;
     max-width: 100%;
-    min-height: unset;
+    width: 100%;
+    flex: 1; /* ✅ Fills space above footer */
     box-sizing: border-box;
+    display: block;
   }
 
   main {
@@ -157,5 +160,6 @@ a {
     padding: 1rem 0;
     background-color: #041E38;
     color: white;
+    flex-shrink: 0;
   }
 }
