@@ -24,7 +24,7 @@ html, body {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  display: block; /* ✅ remove centering that caused layout shift */
+  display: block;
 }
 
 header {
@@ -58,7 +58,6 @@ header {
   height: 100px;
 }
 
-
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -72,9 +71,10 @@ footer {
   background-color: #041E38;
   color: white;
 }
-/* Navigation Bar */
+
+/* ✅ Navigation Bar (now matches header) */
 .main-nav {
-  background-color: #F4F3F3;
+  background-color: #041E38;
   padding: 0.5rem 1rem;
   text-align: center;
 }
@@ -89,7 +89,7 @@ footer {
 
 .main-nav a {
   text-decoration: none;
-  color: #041E38;
+  color: white;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -97,13 +97,16 @@ footer {
 }
 
 .main-nav a:hover {
-  background-color: #ddd;
+  background-color: #022648;
 }
-/* Links */
+
+/* ✅ Links */
 a {
   color: #0055aa;
   text-decoration: none;
 }
+
+/* ✅ Responsive Mobile Fix (mobile only) */
 @media (max-width: 600px) {
   html, body {
     margin: 0;
@@ -133,7 +136,7 @@ a {
     padding: 1.5rem 1rem 2rem 1rem;
     margin: 0 auto;
     max-width: 100%;
-    min-height: unset;     /* removes excess height */
+    min-height: unset;
     box-sizing: border-box;
   }
 
@@ -156,3 +159,5 @@ a {
     display: block !important;
   }
 }
+
+This version keep
