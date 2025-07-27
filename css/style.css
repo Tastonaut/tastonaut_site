@@ -58,6 +58,7 @@ header {
   height: 100px;
 }
 
+
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -71,7 +72,33 @@ footer {
   background-color: #041E38;
   color: white;
 }
+/* Navigation Bar */
+.main-nav {
+  background-color: #F4F3F3;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
 
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #041E38;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background 0.3s;
+}
+
+.main-nav a:hover {
+  background-color: #ddd;
+}
 /* Links */
 a {
   color: #0055aa;
